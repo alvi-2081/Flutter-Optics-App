@@ -8,6 +8,8 @@ class Patient {
   final String bvd;
   final String ipd;
   final String hirschberg;
+  final String cheifComplain;
+  final String mh;
 
   Patient({
     required this.name,
@@ -19,6 +21,8 @@ class Patient {
     required this.bvd,
     required this.ipd,
     required this.hirschberg,
+    required this.cheifComplain,
+    required this.mh,
   });
 
   // Convert Patient to Map for storage
@@ -32,6 +36,8 @@ class Patient {
         'bvd': bvd,
         'ipd': ipd,
         'hirschberg': hirschberg,
+        'cheifComplain': cheifComplain,
+        'mh': mh
       };
 
   // Convert JSON Map to Patient
@@ -45,6 +51,8 @@ class Patient {
         bvd: json['bvd'],
         ipd: json['ipd'],
         hirschberg: json['hirschberg'],
+        cheifComplain: json['cheifComplain'],
+        mh: json['mh'],
       );
 }
 
@@ -59,6 +67,8 @@ final List<Patient> dummyPatients = [
     bvd: "14mm",
     ipd: "59mm",
     hirschberg: "20 degree temporal",
+    cheifComplain: "Headache, blur vision",
+    mh: "N/A",
   ),
   Patient(
     name: "Saima",
@@ -70,6 +80,8 @@ final List<Patient> dummyPatients = [
     bvd: "14mm",
     ipd: "50mm",
     hirschberg: "Normal",
+    cheifComplain: "Blur vision at distance",
+    mh: "N/A",
   ),
   Patient(
     name: "Farooq",
@@ -81,6 +93,8 @@ final List<Patient> dummyPatients = [
     bvd: "16mm",
     ipd: "63mm",
     hirschberg: "15 degree nasal",
+    cheifComplain: "Floaters , blur vision",
+    mh: "HTM + , DM+",
   ),
   Patient(
     name: "Mushtaq Raza",
@@ -92,6 +106,8 @@ final List<Patient> dummyPatients = [
     bvd: "15mm",
     ipd: "62mm",
     hirschberg: "15 degree temporal",
+    cheifComplain: "Blur vision , minor diplopia",
+    mh: "HTM+",
   ),
   Patient(
     name: "Faiza",
@@ -103,6 +119,8 @@ final List<Patient> dummyPatients = [
     bvd: "16mm",
     ipd: "61mm",
     hirschberg: "20 degree temporal",
+    cheifComplain: "Blur vision  at distance",
+    mh: "N/A",
   ),
   Patient(
     name: "Rabiya Wasim",
@@ -114,6 +132,8 @@ final List<Patient> dummyPatients = [
     bvd: "14mm",
     ipd: "63mm",
     hirschberg: "15 degree nasal",
+    cheifComplain: "Blur vision at distance and near",
+    mh: "DM +",
   ),
   Patient(
     name: "Kashif Haider",
@@ -125,6 +145,8 @@ final List<Patient> dummyPatients = [
     bvd: "12mm",
     ipd: "43mm",
     hirschberg: "On center",
+    cheifComplain: "N/A",
+    mh: "N/A",
   ),
   Patient(
     name: "Fatima",
@@ -136,6 +158,8 @@ final List<Patient> dummyPatients = [
     bvd: "15mm",
     ipd: "58mm",
     hirschberg: "35 degree temporal",
+    cheifComplain: "Flashes of light , blur vision",
+    mh: "N/A",
   ),
   Patient(
     name: "Suman",
@@ -147,6 +171,8 @@ final List<Patient> dummyPatients = [
     bvd: "12mm",
     ipd: "49mm",
     hirschberg: "On center",
+    cheifComplain: "N/A",
+    mh: "N/A",
   ),
   Patient(
     name: "Hafiz Ali",
@@ -158,6 +184,8 @@ final List<Patient> dummyPatients = [
     bvd: "15mm",
     ipd: "63mm",
     hirschberg: "20 degree nasal",
+    cheifComplain: "Blur vision, excessive headache",
+    mh: "N/A",
   ),
   Patient(
     name: "Muhammad Osama",
@@ -169,5 +197,7 @@ final List<Patient> dummyPatients = [
     bvd: "16mm",
     ipd: "63mm",
     hirschberg: "35 degree temporal",
+    cheifComplain: "Blur vision, black spot",
+    mh: "HTM+, DM+",
   ),
 ];
