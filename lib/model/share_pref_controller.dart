@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SharePrefController {
   static List<Patient> patients = [];
+  static List<Patient> searchPatients = [];
   static late final SharedPreferences prefs;
 
   static Future<void> loadPatients() async {
@@ -23,9 +24,15 @@ class SharePrefController {
 
   static Future<void> addPatient(Patient patient) async {
     final prefs = await SharedPreferences.getInstance();
-    patients.add(patient);
+    patients.insert(0, patient);
     final String encodedPatients =
         jsonEncode(patients.map((p) => p.toJson()).toList());
     await prefs.setString('patients', encodedPatients);
+  }
+
+  static searchPatientsByName(String query) {
+    searchPatients = patients
+        .where((p) => p.name.toLowerCase().contains(query.toLowerCase()))
+        .toList();
   }
 }

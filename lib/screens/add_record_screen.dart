@@ -133,11 +133,12 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                                 ? "N/A"
                                 : medicalHistory.text,
                           ));
-                          Navigator.pushReplacement(
+                          Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const PatientListScreen()));
+                                      const PatientListScreen()),
+                              (route) => false);
                         }
                       },
                       child: const Text("Save Record",
